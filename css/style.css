@@ -1,0 +1,260 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/* zmienne kolorow */
+:root{
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --dark: #161616;
+    --light: #EDF1FD;
+    --light-nav: #F4F7FF;
+    --font-color: #292929;
+    --grey: #666;
+    --green: #17d1ab;
+}
+/* ustawienia strony */
+body{
+    background-color: var(--dark);
+    margin: 0;
+    padding: 0;
+}
+/* zmienne */
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* main */
+#main{
+    background-image: url("../images/bg.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 1330px;
+    background-color: var(--light);
+    padding: 30px 50px;
+    box-sizing: border-box;
+    position: relative;
+    }
+
+/* navigation */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--light-nav);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 50px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 12px var(--box-shadow);
+    z-index: 1;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--font-color);
+    font-family: 'Poppins', sans-serif;
+}
+.menu{
+    display: flex;
+}
+.menu li a{
+    color: var(--font-color);
+    padding: 10px 15px;
+    font-size: 12px;
+}
+.active a, .menu li a:hover{
+    background-color: var(--dark);
+    color: var(--light) !important;
+    transition: all ease 1s;
+}
+.lang{
+    color: var(--font-color);
+}
+/* tekst o mnie */
+.name{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+}
+.name p{
+    color: var(--grey);
+}
+.name h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: var(--font-color);
+}
+.name h1 span{
+    color: var(--green);
+}
+/* Pobierz moje cv */
+.cvBtn{
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    width: 250px;
+    height: 50px;
+}
+.cvBtn:hover{
+    background-color: var(--green);
+    transition: all ease 1s;
+}
+/* strzałka */
+.black-line{
+    align-self: right;
+    border-right: 1px solid var(--dark);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 20%;
+    margin-bottom: 50px;
+}
+/* grot strzałki */
+.black-line:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px;
+    right: -16px;
+    bottom: -16px;
+    position: absolute;
+    border-color: var(--dark) transparent transparent transparent;
+}
+/* ikonki social media */
+.social{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+.social a{
+    margin: 0 15px;
+    color: var(--grey);
+}
+.social a:hover{
+    color: var(--green);
+}
+/* Sekcja o mnie */
+#about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+.about-text{
+    width: 50%;
+    color: var(--light);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about-text h1{
+    color: var(--green);
+    font-size: 5rem;
+}
+.about-text h2{
+    font-size: 3rem;
+}
+}
+.about-text p{
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+.about-text button{
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--green);
+    border: none;
+    outline: none;
+    margin: 30px;
+}
+.about-text button:hover{
+    background-color: var(--light);
+    transition: all ease 1s;
+}
+/* my services */
+#services{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+.s-heading{
+    text-align: center;
+    margin: 20px 0;
+}
+.s-heading h1{
+    font-size: 3rem;
+}
+.s-heading p{
+    color: var(--gray);
+}
+.b-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.s-box{
+    width: 350px;
+    height: 500px;
+    background-color: var(--grey);
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 12px var(--light);
+    position: relative;
+}
+.s-b-img{
+    width: 100%;
+    height: 70%;
+}
+.s-box img{
+    width: 100%;
+    height: 100%;
+}
+.s-type{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--dark);
+    font-size: 18px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 2px 2px 12px var(--green);
+}
+.s-b-text{
+    font-size: 1.1em;
+    text-align: center;
+    padding: 0 10px;
+}
+.s-box:hover{
+    transform: translateY(-20px);
+    transition: all ease 0.25s;
+}
